@@ -16,12 +16,13 @@
 		#hover3,#hover6{max-width: 18%; font-weight: bold;}
 		#contactme{height: 27px; width: 120px;background-color: #625F5F;font-family: 'Open Sans';font-size: 17px; padding-top: 3px;padding-left: 18px;}
 		#createacc{height: 27px; width: 140px;background-color: #625F5F;font-family: 'Open Sans' ;font-size: 17px; padding-top: 3px;padding-left: 12px;}
-		#myimage3{height: 385px;}
+		#myimage3{height: 385px; width: 100%}
 		#lazy{height: 120px;width: 250px;}
 		#lazy1{height: 51.45px;width: 65px;}
-		#modularkitchen1{height: 300px;width: 800px;}
-		#modularkitchen{height: 148px; ;width: 400px;}
-		#estimation{height: 27px; width: 180px;font-size: 17px; padding: 2%;}
+		#modularkitchen1{height: 300px;width: 100%;}
+		#modularkitchen{height: 148px;width: 100%;}
+		#modularkitchensmall{width: 42%;height: 8rem; padding: 4px 1px 4px 1px;}
+		#estimation{height: 27px; width: 180px;font-size: 17px; padding: 1%;}
 		#searchbar {
     width: 200px;
     box-sizing: border-box;
@@ -93,6 +94,9 @@
 <section class="left-small">
 <a class="left-off-canvas-toggle menu-icon" id="menuicon" style="background-color: red;"><span></span></a>
 </section>
+<section class="right-small">
+<a href="tel:+91 9014324646"><img src="https://d32e2cg1dqah35.cloudfront.net/static/images/miscellaneous/header-mike.png" width="100%"></a>
+</section>
 </nav>
 <aside class="left-off-canvas-menu">
 <ul class="off-canvas-list">
@@ -141,7 +145,7 @@
 
 
 <div class="row" style="padding-top: 7px;">
-  <div class="large-8 columns" style="padding: 0px; margin: 0px; "><ul class="example-orbit" data-options="animation_speed:1000;
+  <div class="large-8 medium-7 columns" style="padding: 0px; margin: 0px; "><ul class="example-orbit" data-options="animation_speed:1000;
                   pauseonhover:false;
                   slide_number:false;
                   navigation_arrows:false;
@@ -162,7 +166,7 @@
   </li>
 </ul>
 </div>
-  <div class="large-4 columns" style="background-color: #DADAD7; padding-top: 11px; padding-left: 10px;">
+  <div class="large-4 medium-5 columns" style="background-color: #DADAD7; padding-top: 11px; padding-left: 10px;">
   	<center><a style="font-size: 17px;color:black;"><b>We Do Complete Home Interiors</b></a></center>
   	<ul style="font-size: 11px;">
 	<li style=" padding-top: 7px;padding-bottom: 7px;"><b>Modular Furniture-</b> Kitchens, Wardrobes, TV Units, etc.</li>
@@ -171,7 +175,18 @@
 	<li><b>Appliances-</b> Hob, Chimney, Dishwasher, Refrigerator, etc.</li>
 	<li style=" padding-top: 7px;padding-bottom: 7px;"><b>Decor-</b> Curtains, Blinds, Mattresses, Wallpapers, etc. & everything that you need to do your home interiors</li>
   	</ul>
-  	<div class="row" style="padding: 15px;">
+  	<div class="columns show-for-medium-up" style="padding: 15px 0px 15px 0px;">
+  	<input class="columns" type="text" name="mobile" placeholder="Mobile No." style="width: 150px; height: 30px; background-color: #DADAD7;border-color: grey ;">
+  	<select class="columns" name="city" style="width: 130px; height: 30px; padding: 0px 0px 0px 5px;background-color: #DADAD7; font-size: 15px;border-color: grey;">
+  		<option>City</option>
+  		<option>Vizag</option>
+  		<option>Bangalore</option>
+  		<option>Hyderabad</option>
+  		<option>Chennai</option>
+  		<option>Others</option>
+  	</select>
+  	</div>
+  	<div class="row hide-for-medium-up" style="padding: 5px 50px 5px 50px;">
   	<input class="columns" type="text" name="mobile" placeholder="Mobile No." style="width: 160px; height: 30px; background-color: #DADAD7;border-color: grey ;">
   	<select class="columns" name="city" style="width: 140px; height: 30px; padding: 0px 0px 0px 5px;background-color: #DADAD7; font-size: 15px;border-color: grey;">
   		<option>City</option>
@@ -186,7 +201,6 @@
   	<div class="marquee"><p>Our Showrooms are open on Sundays</p></div>
   </div>
   </div>
-</div>
 
 <div class="row">
 	<center><p style="font-size: 22px; color: black; padding-bottom: 20px;">Buy Customised Interiors Directly From The Manufacturer</p>
@@ -253,11 +267,41 @@
 </div>
 </div>
 
+<div class="hide-for-medium-up">
+		<center><div style="width: 60%;">
+		<h5>Modular Kitchens</h5>
+		<p style="font-size: 15px;">
+			Customize your kitchen cabinets & get prices instanly online
+		</p>
+		<input type="submit" value="Get Instant Estimation" class="button customize-button c-small c-red" id="estimation" style="background-color: #625F5F;">	
+		</div>
+		<div class="columns"><img src="https://content3.jdmagicbox.com/comp/chennai/r6/044pxx44.xx44.170210134307.p5r6/catalogue/customfurnish-thoraipakkam-chennai-interior-designers-rouke2.jpg" style="width: 91%"></div>
+		<div class="row">
+			<img src="http://production-modular-kitchens.s3.amazonaws.com/L-SHAPED-13" id="modularkitchensmall">
+			<img src="https://www.siematic.com/fileadmin/interior/siematic-interior-drawers-pullouts-wood-013.jpg" id="modularkitchensmall">
+		</div></center>
+</div>
+
+<div class="hide-for-medium-up" style="padding-top: 2rem; ">
+		<center><div style="width: 60%;">
+		<h5>Wardrobes</h5>
+		<p style="font-size: 15px;">
+			Build smart storage spaces. Customise not just exteriors but also interiors
+		</p>
+		<input type="submit" value="Get Instant Estimation" class="button customize-button c-small c-red" id="estimation" style="background-color: #625F5F;">	
+		</div>
+		<div class="columns"><img src="https://kustommadeprod.s3.amazonaws.com/554082a9b601013d054d78c4" style="width: 91%"></div>
+		<div class="row">
+			<img src="http://www.customfurnish.com/static/img/wallToWall/wardrobe-1.jpg" id="modularkitchensmall">
+			<img src="https://i.pinimg.com/originals/e3/8a/a6/e38aa68675452278a36e7d176e91d629.jpg" id="modularkitchensmall">
+		</div></center>
+</div>
+
 <div class="row large-12 small-12 show-for-medium-up">
-	<div class="large-5 medium-8 small-1 columns kitchenbg" style="margin: 0px; padding: 0px;">
+	<div class="large-5 medium-7 small-1 columns kitchenbg" style="margin: 0px; padding: 0px;">
 		<img src="https://content3.jdmagicbox.com/comp/chennai/r6/044pxx44.xx44.170210134307.p5r6/catalogue/customfurnish-thoraipakkam-chennai-interior-designers-rouke2.jpg" id="modularkitchen1">
 	</div>
-	<div class="large-3 medium-6 small-1 columns" style="margin: 0px;padding-left: 4px;">
+	<div class="large-3 medium-5 small-1 columns" style="margin: 0px;padding-left: 4px;">
 		<div>
 			<img src="http://production-modular-kitchens.s3.amazonaws.com/L-SHAPED-13" id="modularkitchen">
 		</div>
@@ -265,7 +309,7 @@
 			<img src="https://www.siematic.com/fileadmin/interior/siematic-interior-drawers-pullouts-wood-013.jpg" id="modularkitchen">
 		</div>
 	</div>
-	<div class="large-3 medium-6 small-1 columns" style="margin: 0px; padding-top: 7%; float: left;"><center>
+	<div class="large-3 medium-12 small-1 columns" style="margin: 0px; padding-top: 7%; float: left;"><center>
 		<h4>Modular Kitchens</h4>
 		<p style="font-size: 15px;">
 			Customize your kitchen cabinets & get prices instanly online
@@ -277,7 +321,7 @@
 
 
 <div class="row large-12 small-12 show-for-medium-up">
-	<div class="large-4  medium-6 small-1 columns" style="margin: 0px; padding-top: 8%; padding-left: 3%; padding-right: 3%;">
+	<div class="large-4  medium-12 small-1 columns" style="margin: 0px; padding-top: 8%; padding-left: 3%; padding-right: 3%;">
 		<center><h4>Wardrobes</h4>
 		<p style="font-size: 15px;">
 			Build smart storage spaces. Customise not just exteriors but also interiors
@@ -285,10 +329,10 @@
 		<input type="submit" value="Get Instant Estimation" class="button customize-button c-small c-red" id="estimation" style="background-color: #625F5F;">
 	</center>
 	</div>
-	<div class="large-5 medium-8 small-1 columns kitchenbg" style="margin: 0px; padding: 0px;">
+	<div class="large-5 medium-7 small-1 columns kitchenbg" style="margin: 0px; padding: 0px;">
 		<img src="https://kustommadeprod.s3.amazonaws.com/554082a9b601013d054d78c4" id="modularkitchen1">
 	</div>
-	<div class="large-3 medium-6 small-1 columns" style="margin: 0px;padding-left: 4px;">
+	<div class="large-3 medium-5 small-1 columns" style="margin: 0px;padding-left: 4px;">
 		<div style="padding: 0px;margin: 0px;">
 			<img src="http://www.customfurnish.com/static/img/wallToWall/wardrobe-1.jpg" id="modularkitchen">
 		</div>
@@ -520,7 +564,6 @@ Apart from custom furnishing, a host of pre-made, off the shelf furniture is als
 Rest assured, you wont be disappointed! Request a designer to contact you now! Call 9014324646.<br><br>
 	</p>
 </div>
-
 </div>
 </div>
 
