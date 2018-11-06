@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>		
+		tr:nth-child(odd) {background: lightblue;}
+		tr:nth-child(even) {background: lightgrey;}
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	var l=0;
+$(document).ready(function(){
+    $(hide).click(function(){
+        var n=$("#name").val();
+        var e=$("#email").val();
+        var p=$("#phone").val();
+        var x=$("#temp").val();		
+        $(success).css("color","red");
+        if(n.length<3){
+				$(success).text("Name should be more than 3 characters");	
+			}
+			else if(e.indexOf('@') < 0 || e.indexOf('.') < 0 || e.lastIndexOf('.')<e.indexOf('@') || (e.lastIndexOf('.')+1)>=(e.length)) {
+				$(success).text("invalid Email Address");	
+				
+			}
+			else if(p.length!=10){
+				$(success).text("Enter a 10-digit Mobile Number");	
+				
+			}
+			else{
+				if(x == "-1"){
+
+				l=l+1;
+				$(success).css("color","green");
+				$(success).text("Thanks for submission!! will contact you shortly");
+				
+				var newrow=	"<tr id='"+l+"'><td>"+n+"</td><td>"+e+"</td><td>"+p+"</td><td><button onclick='updaterow(this)' id='"+l+"'>Update</button></td><td><button onclick='deleterow(this)'  id='"+l+"'>Delete</button></td></tr>";
+				$("#myTable").append(newrow);		
+				$("#name").val("");
+        		$("#email").val("");
+        		$("#phone").val("");}
+
+        		else{
+        			$("#myTable tr#"+x+" td:eq(0)").text(n);
+        			$("#myTable tr#"+x+" td:eq(1)").text(e);
+        			$("#myTable tr#"+x+" td:eq(2)").text(p);
+        			$("#temp").val("-1");
+        			$("#name").val("");
+        			$("#email").val("");
+        			$("#phone").val("");
+        			$(success).css("color","green");
+					$(success).text("Updation Successfull");
+					$("#myTable tr#"+x).css("background-color","green");
+        		}
+			}
+    });
+});
+function deleterow($this){
+    	var data=$this.id;
+    	$("#myTable tr#"+data).remove();
+    }
+function updaterow($this){
+		var data=$this.id;	
+		$("#name").val($("#myTable tr#"+data+" td:eq(0)").text());
+        $("#email").val($("#myTable tr#"+data+" td:eq(1)").text());
+        $("#phone").val($("#myTable tr#"+data+" td:eq(2)").text());
+        $("#temp").val(data);
+}
+</script>
+</head>
+<body align="center" style="padding: 10px;">
+
+<form id="myform">
+	Name:  <input type="text" name="name" id="name"><br>
+	Email: <input type="text" name="email" id="email"><br>
+	Phone: <input type="text" name="phone" id="phone"><br>
+	<input type="text" id="temp" hidden="true" value="-1">
+	
+</form>
+<button id="hide">Submit</button>
+<p id="success"></p>
+
+<table align="center" border="2" id="myTable">
+	<tr style="background-color: white;"><th>name</th><th>email</th><th>contact</th><th></th><th></th></tr>
+
+</table>
+
+</body>
+</html>

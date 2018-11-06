@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		submit page
+	</title>
+</head>
+<body>
+	<div>
+	<form>
+		Name:<input type="text" id="name" placeholder="example"><br><br>
+		
+		Email:<input type="text" id="email" placeholder="example@example.com"><br><br>
+		
+		Contact:<input type="text" id="phone" placeholder="9xxxxxxxx9" onkeypress="validate(event)"><br><br>
+		
+		<button onclick="return verify()">submit</button>	
+	</form>
+	
+	</div>
+	<p id="success"></p>
+	<div id="div1">
+		<p id="output"></p>
+	</div>
+	<script type="text/javascript">
+		function verify() {
+			var n=document.getElementById("name").value;
+			var e=document.getElementById("email").value;
+			var p=document.getElementById("phone").value;
+			document.getElementById("success").style.color="red";
+			if(n.length<2){
+				document.getElementById("success").innerHTML="Name should be more than 3 characters";	
+				
+			}
+			else if(e.indexOf('@') < 0 || e.indexOf('.') < 0 || e.lastIndexOf('.')<e.indexOf('@') || (e.lastIndexOf('.')+1)>=(e.length)) {
+				document.getElementById("success").innerHTML="invalid Email Address";	
+				
+			}
+			else if(p.length!=10){
+				document.getElementById("success").innerHTML="Enter a 10-digit Mobile Number";	
+				
+			}
+			else{
+				document.getElementById("success").style.color="green";
+				document.getElementById("success").innerHTML="Thanks for submission!! will contact you shortly.";
+
+				/*var out=document.getElementById("output").innerHTML;
+				out=out+n+"&nbsp;&nbsp;"+e+"&nbsp;&nbsp;"+p+"<br>";
+				document.getElementById("output").innerHTML=out;*/
+				
+				var node = document.createTextNode(n+" "+e+" "+p);		
+				var para = document.createElement("p");
+				para.appendChild(node);
+				document.getElementById("div1").appendChild(para);
+				
+				document.getElementById("name").value='';
+				document.getElementById("phone").value='';
+				document.getElementById("email").value='';
+				
+			}
+			return false;
+		}
+
+function validate(evt) {
+	var key=evt.keyCode;
+	key=String.fromCharCode(key);
+
+	if(isNaN(key)){
+		evt.returnValue=false;
+	}	
+}
+
+	</script>
+</body>
+</html>
