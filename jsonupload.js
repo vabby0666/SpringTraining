@@ -10,6 +10,7 @@ $("#upload").click(function () {
             if (regex.test($("#fileUpload").val().toLowerCase())) {
                 if (typeof (FileReader) != "undefined") {
                     var reader = new FileReader();
+                    reader.readAsText($("#fileUpload")[0].files[0]);
                     
                     reader.onload = function (e) {
                         var rows = e.target.result.split("\r\n");
@@ -26,16 +27,17 @@ $("#upload").click(function () {
                                     $("#phone").val(cells[2].replace(/"/g,''));
                                     $("#sub_btn").trigger('click');
                                     data=JSON.parse(localStorage.getItem("storeddata"));
-                                    if(k1!=data.length){
-                                    $("#dvCSV").css("color","green");
-                                    $("#dvCSV").html("Uploaded Successful");
-                                    }else{
-                                    $("#dvCSV").css("color","red");
-                                    $("#dvCSV").html("Duplicate Data Found!!");    
+                                       
                                     }
                                 }
                             }
                         }
+                        if(k1!=data.length){
+                        $("#dvCSV").css("color","green");
+                        $("#dvCSV").html("Uploaded Successful");
+                        }else{
+                        $("#dvCSV").css("color","red");
+                        $("#dvCSV").html("Duplicate Data Found!!"); 
                     }
                     else
                     {
@@ -43,7 +45,6 @@ $("#upload").click(function () {
                     	$(dvCSV).html("Data is not in right format(name,email,phone)!!");
                     }
                     }
-                    reader.readAsText($("#fileUpload")[0].files[0]);
                 } else {
                     alert("This browser does not support HTML5.");
                 }
