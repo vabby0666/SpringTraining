@@ -28,7 +28,6 @@ $("#upload").click(function () {
                                     $("#sub_btn").trigger('click');
                                     data=JSON.parse(localStorage.getItem("storeddata"));
                                        
-                                    }
                                 }
                             }
                         }
@@ -37,7 +36,8 @@ $("#upload").click(function () {
                         $("#dvCSV").html("Uploaded Successful");
                         }else{
                         $("#dvCSV").css("color","red");
-                        $("#dvCSV").html("Duplicate Data Found!!"); 
+                        $("#dvCSV").html("Duplicate Data Found!!");
+                        }
                     }
                     else
                     {
